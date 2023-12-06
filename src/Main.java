@@ -4,7 +4,6 @@ import Entitites.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,9 +13,7 @@ public class Main {
         List<Order> oredrList= new ArrayList<>();
 
         Customer mario= new Customer("Mario",2);
-        Customer paolo= new Customer("Paolo",0);
-        Customer marta= new Customer("Marta",5);
-        Customer kaio= new Customer("kaio",1);
+
 
         productList.add(new Product("harry potter e la pietra filosofale","Books",120));
         productList.add(new Product("Halo Reach","Books",80));
@@ -31,13 +28,14 @@ public class Main {
         oredrList.add(new Order("evaded",mario,productList));
         oredrList.add(new Order("evaded",mario,productList));
 
-
-
-
-//        booksFilter(productList);   //es 1
-//        babyCategory(productList);  // es 2 ma compresa male la consegna lo lascio comunuque
-        babyCategory2(oredrList);   //es 2 prop giusto
-//        discountBoys(productList);  //es 3
+//            es1
+        booksFilter(productList);
+//        es2
+        babyCategory(productList);
+//        es2 corretto
+        babyCategory2(oredrList);
+//        es3
+        discountBoys(productList);
 
 
 
